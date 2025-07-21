@@ -128,9 +128,6 @@ footer {
   border: white 10px double;
   cursor: pointer;
 }
-#pigeonHistoryID {
-  
-}
 #navigation {
   max-width: 100%;
   display: grid;
