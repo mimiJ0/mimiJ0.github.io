@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <link href="css/styles.css" type="text/css" rel="stylesheet">
+        <link href="styles.css" type="text/css" rel="stylesheet">
         <script src="javascript.js" defer></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,42 +11,50 @@
 
     <body>
         <main>
-            <!--Showing the history-->
-            <div class="test1 hiddenItem" id="HistoryWindow">
-                <img src="images/textwindowTop.jpg" class="topWindow">
-                <div class="scroll">
-                    <article class="grid2x1">
-                    <h3>What are they?</h3>
-                    <p class="grid2x1_Item2"> Domestic pigeons are a sub species of the 'Rock Pigeon'. These pigeons have been domesticated over <b>50,000</b> years ago, making them one of the oldest domesticated birds.</p>
-                    <img src="images/rockPigeon.jpg" class="grid2x1_Item1">
-                    </article>
-                    <article>
-                    <h3>Pigeon history</h3>
-                    <p>Not much is known about their initial domestication due to their poor, fragile bones making it hard to study.</p>
-                </article>
+            <div class="fullPage">
+                <div>
+                    <h1>LIFE OF A PIGEON...</h1>
+                    <div class="relativePos">
+                        <div class="circle" id="pigeonWing"></div>
+                        <div class="circle" id="pigeonHead"></div>
+                        <img src="images/pigeonFullBody.png">
+                    </div>
                 </div>
-                <button class="buttonFrame"><b>Back</b></button>
-                <img src="images/textwindowBtm.jpg" class="btmWindow">
+                
+                <div class="textWindow center hiddenItem" id="wingWindow">
+                    <h2>Wings of a Pigeon</h2>
+                    <p>38-42 cm Long with a wingspan of 50-67cm</p>
+                    <button id="wingBtn" class="btn" onclick="closeWindow()"><i>Close</i></button>
+                </div>
+
+                <div class="textWindow center hiddenItem " id="headWindow">
+                    <h2>Head of a Pigeon</h2>
+                    <img src="images/pigeonSkull.jpg">
+                    <button id="headBtn" class="btn" onclick="closeWindow()"><i>Close</i></button>
+                </div>
+            </div>
+            
+            <div class="parallaxBG fullPage">
+                <h1>Isn't Easy.</h1>
             </div>
 
-            <div class="buttons" id="ButtonsID">
-                <div class="framedbuttonPigeon" id="HistoryBtn">
-                    <img src="images/pigeonHistoryButton.jpg" class="framedImg">
-                    <h2>Pigeon History</h2>
+            <div class="lockedScroll">
+                <div class="lockedScrollContent fullPage">
+                    <h2>Learn About Pigeons</h2>
+                    <p>Testing</p>
+                    <div>
+                        <img src="images/rockPigeon.jpg">
+                    </div>
                 </div>
             </div>
-
-            <div class="container" id="introButton">
-                <div class="pigeonFrame floatingItem fadeAway">
-                    <h1>THE TRUTH ABOUT PIGEONS</h1>
-                </div>
-                <button class="buttonFrame floatingItem fadeAway" onclick="buttonClick()"><b>CONTINUE</b></button>
-            </div>
- 
+                
+            <img src="images/pigeonStare.jpg" id="bouncePigeon">
+                
         </main>
         <!--Go back to top using ID-->
         <footer>
-            <img src="images/pigeonStare.jpg" id="bouncePigeon">
+            <h3>⋋(•⌔•)⋌</h3>
+            <p>I love pigeons</p>
         </footer>
     </body>
 </html>

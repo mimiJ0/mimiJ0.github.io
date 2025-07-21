@@ -1,10 +1,59 @@
-const item = document.querySelector('.floatingItem');
+//Buttons:
+    const wingBtn = document.getElementById("wingBtn");
+    const headBtn = document.getElementById("headBtn");
 
-document.querySelectorAll('.floatingItem').forEach( item => {
-    const randomNumber = Math.floor(Math.random() * 3) + 1;
-    item.style.animationDuration = `${randomNumber}s`;
-});
+//Windows:
+    const wingWindow = document.getElementById("wingWindow");
+    const headWindow = document.getElementById("headWindow");
 
+//Pigeon parts:
+    const pigeonWing = document.getElementById("pigeonWing");
+    const headWing = document.getElementById("pigeonHead");
+
+//WING WINDOW:
+    function closeWingWindow() {
+            wingWindow.classList.remove("windowAnimationOpen");
+            wingWindow.classList.add("windowAnimationClose");
+    }
+    wingBtn.addEventListener("click",closeWingWindow);
+
+    function clickWingWindow() {
+        wingWindow.classList.remove("hiddenItem");
+        wingWindow.classList.add("windowAnimationOpen");
+    }
+    pigeonWing.addEventListener("click",clickWingWindow);
+
+    wingWindow.addEventListener('animationend', (e) => {
+        if (e.animationName == "windowAnimationFramesClose")
+        {
+            wingWindow.classList.add("hiddenItem");
+            wingWindow.classList.remove("windowAnimationClose");
+            wingWindow.classList.remove("windowAnimationOpen");
+        }
+    });
+
+//HEAD WINDOW
+    function closeHeadWindow() {
+            headWindow.classList.add("windowAnimationClose");
+    }
+    headBtn.addEventListener("click",closeHeadWindow);
+
+    function clickHeadWindow() {
+        headWindow.classList.remove("hiddenItem");
+        headWindow.classList.add("windowAnimationOpen");
+    }
+    pigeonHead.addEventListener("click",clickHeadWindow);
+
+    headWindow.addEventListener('animationend', (e) => {
+        if (e.animationName == "windowAnimationFramesClose")
+        {
+            headWindow.classList.add("hiddenItem");
+            headWindow.classList.remove("windowAnimationClose");
+            headWindow.classList.remove("windowAnimationOpen");
+        }
+    });
+
+//BOUNCING PIGEON
 const pigeonID = document.getElementById("bouncePigeon");
 
 function clickPigeon() {
@@ -16,26 +65,17 @@ pigeonID.addEventListener('animationend', () => {
     pigeonID.classList.remove("bouncingItem");
 });
 
-function buttonClick(){
-    document.querySelectorAll('.fadeAway').forEach( item => {
-            item.classList.add("Fade");
-        item.addEventListener('animationend', () => {
-            item.style.display = "none"; //hides the items
-            });
-        });
-        
-    document.querySelectorAll('.framedbuttonPigeon').forEach( item => {
-        item.classList.add("unblurItem");
-        });
-}
+// //LOCKED SCROLLING:
+// const lockedScroll = document.getElementById("lockedScroll");
+// const lockedScrollContent = document.querySelector(".lockedScroll");
 
-const historybtn = document.getElementById("HistoryBtn");
-const buttonsID = document.getElementById("buttonsID");
-const history = document.getElementById("HistoryWindow");
+// function toggleScroll(check) {
+//     document.body.style.overflow = check ? "hidden" : "auto";
+// }
 
-function onClick() {
-        history.classList.remove("hiddenItem");
-        historybtn.classList.add("hiddenItem");
-        buttonsID.classList.add("hiddenItem");
-}
-historybtn.addEventListener("click",onClick);
+// toggleScroll(true);
+
+// lockedScrollContent.addEventListener('scroll', () => {
+//     const hitBtm =  lockedScrollContent.scrollTop +
+
+// });
