@@ -11,74 +11,101 @@
 
     <body>
         <main>
-            <div class="fullPage">
-                <div>
-                    <h1>LIFE OF A PIGEON...</h1>
-                    <div class="relativePos">
-                        <div class="circle" id="pigeonWing"></div>
-                        <div class="circle" id="pigeonHead"></div>
-                        <img src="images/pigeonFullBody.png">
+        <!--Main page, landing page-->
+            <div id="mainPage">
+                <section class="fullPage hide">
+                    <div class="Test">
+                        <h1>LIFE OF A PIGEON...</h1>
+                        <div class="relativePos">
+                            <div class="circle"data-part="wing"></div>
+                            <div class="circle"data-part="head"></div>
+                            <div class="circle"data-part="tail"></div>
+                            <img src="images/pigeonFullBody.png">
+                        </div>
                     </div>
-                </div>
-                
-                <div class="textWindow center hiddenItem" id="wingWindow">
-                    <h2>Wings of a Pigeon</h2>
-                    <p>38-42 cm Long with a wingspan of 50-67cm</p>
-                    <button id="wingBtn" class="btn" onclick="closeWindow()"><i>Close</i></button>
+                </section>
+
+                <section class="parallaxBG fullPage hide">
+                    <h1>Isn't Easy.</h1>
+                    <p>Let's find out why.</p>
+                </section>
+
+                <section class="lockedScroll hide">
+                    <div class="lockedScrollContent lockedScrollButtons" id="pigeonHistoryID">
+                        <h1><i>Pigeon History</i></h1>
+                    </div>
+                    <div class="lockedScrollContent lockedScrollButtons" id="pigeonAbuseID">
+                    <h1><i>Pigeon Abuse</i></h1>
+                    </div>
+                    <div class="lockedScrollContent lockedScrollButtons" id="pigeonBreedsID">
+                    <h1><i>Pigeon Breeds</i></h1>
+                    </div>
+                    <div class="lockedScrollContent lockedScrollButtons" id="pigeonDressUpID">
+                    <h1><i>Dress Up Pigeon</i></h1>
+                    </div>
+                </section>
+            </div>
+        <!------------------->
+            <div class="textWindow center hiddenItem" id="wingWindow">
+                <h2>Wings of a Pigeon</h2>
+                <p>38-42 cm Long with a wingspan of 50-67cm</p>
+                <button id="wingBtn" class="btn" data-part="wing">Close</button>
+            </div>
+
+            <div class="textWindow center hiddenItem " id="headWindow">
+                <h2>Head of a Pigeon</h2>
+                <img src="images/pigeonSkull.jpg">
+                <button id="headBtn" class="btn" data-part="head">Close</button>
+            </div>
+
+            <div class="textWindow center hiddenItem " id="tailWindow">
+                <h2>Tail of a Pigeon</h2>
+                <p>Helps pigeon balance, steer, brake, and attract mates.</p>
+                <button id="tailBtn" class="btn" data-part="tail">Close</button>
+            </div>
+        <!--Hamburger Menu:-->
+            <div id="menu">
+                <h3>Menu</h3>
+                <button class="hamMenuButtons" data-contentbtns="history">Pigeon History</button>
+                <button class="hamMenuButtons" data-contentbtns="abuse">Pigeon Abuse</button>
+                <button class="hamMenuButtons" data-contentbtns="breeds">Pigeon Breeds</button>
+                <button class="hamMenuButtons" data-contentbtns="upbringing">Pigeon Upbringing</button>
+                <button class="hamMenuButtons" data-contentbtns="home">Home</button>
+            </div>
+        <!------------------->
+        <!--contents that will show when button clicked-->
+        <!--History: -->
+            <section id="pigeonHistoryContent" class="contentPage hiddenItem">
+                <h2>What are they?</h2>
+                <div class="grid_2x1">
+                    <img src="images/rockPigeon.jpg">
+                    <p> Domestic pigeons are a sub species of the 'Rock Pigeon'. These pigeons have been domesticated over <b>50,000</b> years ago, making them one of the oldest domesticated birds.</p>
                 </div>
 
-                <div class="textWindow center hiddenItem " id="headWindow">
-                    <h2>Head of a Pigeon</h2>
-                    <img src="images/pigeonSkull.jpg">
-                    <button id="headBtn" class="btn" onclick="closeWindow()"><i>Close</i></button>
-                </div>
-            </div>
-            
-            <div class="parallaxBG fullPage">
-                <h1>Isn't Easy.</h1>
-                <p>It's tough being abandoned.</p>
-            </div>
+                <h2>Pigeon history</h2>
+                <div class="grid_2x1">
+                    <img src="images/pigeonRacing.jpg">
+                    <div>
+                        <p>Not much is known about their initial domestication due to their poor, fragile bones making it hard to study.</p>
+                        <p>They were first domesticated in Mesopotamia, intially farmed for food and eventually used for sending letters to others and pigeon races due to their homing ability.</p>
+                    </div>
+                    
+                </div>                    
+                    <button class = "btn" id="backBtn">Back</button>
+            </section> 
 
-            <div class="lockedScroll">
-                <div class="lockedScrollContent fullPage">
-                    <h2>Click a Pigeon</h2>
-                    <p>⋋(•⌔•)⋌ Any Pigeon! ⋋(•⌔•)⋌</p>
-                    <div id="navigation">
-                        <div id="pigeonHistoryID" class="pigeonButtons">
-                        <img src="images/rockPigeon.jpg">
-                        <p><b><i>Pigeon History</i></b></p>
-                        </div>
-                         <div id="pigeonAbuseID" class="pigeonButtons">
-                        <img src="images/rockPigeon.jpg">
-                        <p><b><i>Pigeon Abuse</i></b></p>
-                        </div>
-                        <div id="pigeonBreedsID" class="pigeonButtons">
-                        <img src="images/rockPigeon.jpg">
-                        <p><b><i>Pigeon Breeds</i></b></p>
-                        </div>
-                    </div>
-                    <div id="navigation2">
-                         <div id="pigeonUpbringingID" class="pigeonButtons">
-                        <img src="images/rockPigeon.jpg">
-                        <p><b><i>Pigeon Upbringing</i></b></p>
-                        </div>
-                        <div id="minigameID" class="pigeonButtons">
-                        <img src="images/rockPigeon.jpg">
-                        <p><b><i>Mini Game</i></b></p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-                
-            <img src="images/pigeonStare.jpg" id="bouncePigeon">
-                
+        <!--Abuse: -->
+            <section id="pigeonAbuseContent" class="contentPage hiddenItem">
+                <h2>The Abuse</h2>
+                    <p>Not much is known about their initial domestication due to their poor, fragile bones making it hard to study.</p>
+                    <p>People used to </p>
+                <button class = "btn" id="backBtn">Back</button>
+            </section> 
+        
+            <img src="images/pigeonStare.jpg" id="hamMenuBtnID">
         </main>
-        <!--Go back to top using ID-->
         <footer>
-            <h3>⋋(•⌔•)⋌</h3>
-            <p>I love pigeons</p>
-            <p>Still a WIP</p>
+            <p>Pigeons</p>
         </footer>
     </body>
 </html>
