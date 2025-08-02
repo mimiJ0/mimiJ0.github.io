@@ -2,12 +2,12 @@ body { /*DEFAULT - Mobile*/
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
   margin: 0px;
-  color: #353535;
+  color: white;
   background: black;
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
-h1 {font-size: 80px; color: rgb(255, 255, 255);}
+h1 {font-size: 80px;}
 
 footer {
   background-color: black;
@@ -60,6 +60,7 @@ footer {
   border: 3px black solid;
   padding: 15px;
   background: rgb(233, 233, 233);
+  color: black;
 }
 
 .btn {
@@ -67,6 +68,13 @@ footer {
   padding: 10px;
   background: #b3d4e0;
   cursor: pointer;
+}
+.backBtn{
+  border: 0px;
+  padding: 10px;
+  background: #b3d4e0;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .hiddenItem {display: none;}
@@ -79,27 +87,6 @@ footer {
   background-size: cover;
   color: white;
 }
-
-.lockedScroll {
-  background: rgb(223, 223, 223);
-  scroll-snap-type: x mandatory;  
-  overflow-x: scroll;
-  display: flex;
-}
-.lockedScrollContent {
-  border-right: 1px solid white;
-  padding: 1rem;
-  min-width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start;
-  text-align: center;
-  position: relative;
-  overflow-y: hidden;
-  cursor: pointer;
-  display: grid; place-content: center;
-}
-.lockedScrollContent h1 {transition: .2s;}
-.lockedScrollContent:hover h1 {transform: scale(1.2);}
 
 .hamMenuButtons {
   width: 100%; height: 8%; 
@@ -114,20 +101,158 @@ footer {
 
 .contentPage {
   background-color: rgb(255, 255, 255); 
-  height: auto; width: 100vw;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 5%; padding-right: 5%;
+  color: black;
 }
-.contentPage p {text-align: left;}
 
 .grid_2x1 {
-  justify-content: center; /* center horizontally */
+  justify-content: center;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(2, 30%);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 50%);
   justify-items: center;
+  row-gap: 20px;
 }
+
+/* .grid_4x1 {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-items: center;
+  gap: 15px;
+}
+.grid_4x1 img {width: 80%;}
+.grid_4x1_Item {box-shadow:  0 0 10px rgba(0, 0, 0, 0.4); padding: 5px; height: 100%;} */
+
+.navigation{
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 20%);
+}
+.navigation img {width: 100%;}
+
+.navigationImages {
+  width: 100%; 
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); 
+  transition: .4s;
+  
+}
+.navigationImages:hover { width: 105%; cursor: pointer; }
+
+.whiteBorder {
+  width: 90%;
+  margin: auto;
+  margin-top: 30%; margin-bottom: 30%;
+  border: solid white 2px;
+  font-size: 20px;
+}
+
+.list {
+  text-align: left;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  max-width: 70%;
+}
+.list li { list-style:lower-alpha; padding: 0; margin: 0; }
+
+.quiz {
+ border: 2px rgb(100, 100, 100, 0.8) solid;
+ border-radius: 10px;
+ padding: 10px;
+}
+.arrowCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  display: flex;
+  justify-content: center; align-items: center;
+  cursor: pointer;
+  transition: .2s;
+}
+.arrowCircle:hover {background-color: rgb(214, 214, 214);}
+.rightArrow {
+  width: 15px; height: 15px;
+  border: 3px solid #000;
+  transform: rotate(45deg);
+  border-left: 0px; border-bottom: 0px;
+  background-color: inherit;
+  pointer-events: none; 
+}
+.leftArrow {
+  width: 15px; height: 15px;
+  border: 3px solid #000;
+  transform: rotate(45deg);
+  border-right: 0px; border-top: 0px;
+  background-color: inherit;
+  pointer-events: none; 
+}
+
+.arrowBtnsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 300px; margin: 15px;
+}
+
+.field {
+  border: 2px black solid;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.interactWindow {
+  background-color: rgb(216, 216, 216);
+  border: #a0a0a0 2px solid;
+}
+.foodWindow {
+  background: white; border: grey 2px solid;
+  position:fixed; top: 30%; left: 50%; /*set position of the food window*/
+  padding: 15px; width: max-content;
+  transform: translateX(-50%); /*set it to the middle*/
+  z-index: 2;
+}
+#foodOptions{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.interacBtn {
+  cursor: pointer;
+  background: rgb(95, 95, 95);
+  color: white; margin: 5px; padding: 5px;
+}
+
+.pigeonCareStats {
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.careStat { margin: 15px; }
+
+/*CSS sprites for the interactable objects in minigame*/
+.sponge {
+  background: url('images/interactObjs.png') 0 0;
+}
+.hand {
+  background: url('images/interactObjs.png') -160px 0;
+}
+.ball {
+  position: absolute;
+  top: 0; left: 0;
+  width: 80px; height: 68px;
+   background: url('images/interactObjs.png') -80px 0;
+}
+
 /***********/
 /**IDs**/
 #mainPage{ display: block; max-width: 100vw;}
@@ -137,8 +262,10 @@ footer {
   top: 10px; left: 10px;
   border-radius: 40%; border: white 3px solid;
   z-index: 100;
+  cursor: pointer;
 }
-#menu {
+#hamMenu {
+  color: black;
   position: fixed;
   top: -103vh;
   background: white;
@@ -147,46 +274,59 @@ footer {
   z-index: 100;
   border: 2px solid black;
 }
-/* #menuHistoryBtn {}
-#menuAbuseBtn {}
-#menuBreedsBtn {}
-#menuUpbringingnBtn {} */
 
-#navigation {
-  max-width: 100%;
+#quizContainer {
+  margin: auto;
+  width: 80%;
+  height: 60vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
+  padding: 10px;
+  place-items: center;
 }
-#navigation2 {
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+#questionHolder {  width: 70%; }
+#nextButton {margin-top: 10%; background: rgb(234, 234, 146); border-radius: 8px;}
+
+#minigameContent { height: auto; }
+
+#petPigeonID {
+    animation: squashing 2.5s ease-in-out;
+    animation-iteration-count: infinite;
+    cursor: pointer; position: absolute;
+    transition: 1s ease-in-out;
+    user-select: none;
 }
-#pigeonHistoryContent {
-  align-items: center;
+#moneyBox {
+  text-align: left; background-color: rgb(119, 255, 119);
+  width: max-content; padding: 5px; margin: 0px;
+  position: absolute; left: 0; bottom: 0; /*put the moneybox in the bottom left of the field*/
 }
 
-#pigeonHistoryID {
-  background-image: url(images/pigeonHistory_BG.jpg);
+#interactItem { 
+  position: absolute;
+  top: 0; left: 0;
+  width: 80px; height: 68px;
+  background-image: url('images/interactObjs.png');
   background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
+  background-size: auto;
 }
-#pigeonAbuseID {
-  background-image: url(images/pigeonAbuse_BG.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
+#resetStats {
+  border: 0px;
+  background-color: rgb(255, 119, 119);
+  padding: 10px;
+  cursor: pointer;
 }
-#pigeonBreedsID {
-  background-image: url(images/pigeonBreeds_BG.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
+
+#qrCode {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: -70px;
+  z-index: 99;
+  cursor: pointer;
 }
-/******/
+#qrCode img {width: 50%;}
+
+/*****************/
 /****ANIMATION****/
 @keyframes windowAnimationFramesOpen {
   0% {top: 80%; opacity: 0%;}
@@ -235,7 +375,27 @@ footer {
   0% {opacity: 0%; filter: blur(10px);}
   100% {opacity: 100%; filter: blur(0px);}
 }
-.unHideAndUnBlur {animation: unHideAndUnBlurFrames .5s ease-in-out;}
+.unHideAndUnBlur {animation: unHideAndUnBlurFrames .5s ease-in-out; }
+
+@keyframes spinFrames {
+  0% {transform: scaleX(1); }
+  50% {transform: scaleX(0); }
+  100% {transform: scaleX(1); }
+}
+.spin { animation: spinFrames .5s ease-in-out; }
+
+@keyframes squashing {
+  0% {transform: scaleY(1);}
+  50% {transform: scaleY(.9);}
+  100% {transform: scaleY(1);}
+}
+
+@keyframes flashGreenFrames {
+  0% {color: black;}
+  50% {color: #2b9309;}
+  100% {color: black;}
+}
+.flashGreen { animation: flashGreenFrames .5s ease-in-out; }
 /*****************/
 /*Specifically for scrolling up and down*/
 .hide {
@@ -246,23 +406,27 @@ footer {
 /*****************/
 /**RWS**/
 @media (max-width: 480px ){ /*Mobile*/
-  .Test{width: 400px ;}
-  .Test h1{font-size: 50px;}
+  .pigeonParts{width: 400px ;}
+  .pigeonParts h1{font-size: 50px;}
   .relativePos {width: 300px;}
   .relativePos img {width: 300px;}
-  .grid_2x1 {grid-template-columns: 1fr; padding: 15%;}
-  .lockedScrollContent h1 {font-size: 30px;}
-
-  #menu {width: 100%;}
+  .grid_2x1 {grid-template-columns: 1fr;}
+  .grid_2x1 img {width: 100%;}
+  .list img { width: 40%;}
+  .foodContent {width: 70%;}
+  #hamMenu {width: 100%;}
+  #hamMenuBtnID {width: 20%;}
 }
 
 @media (max-width: 768px){ /*Tablet*/
-  
-  .Test{width: 320px;}
-  .Test h1{font-size: 50px;}
+  .pigeonParts{width: 320px;}
+  .pigeonParts h1{font-size: 50px;}
   .relativePos {width: 300px;}
   .relativePos img {width: 300px;}
-  .grid_2x1 {gap: 15%;}
-
-  .lockedScrollContent h1 {font-size: 30px;}
+  .grid_2x1 {grid-template-columns: 1fr;}
+  .navigation {grid-template-columns: repeat(2, 40%);}
+  .arrowBtnsContainer {gap: 80px;}
+  .pigeonCareStats {width: 50%;}
+  .qrCode {display: none;}
+  #questionHolder {width: 100%;}
 }

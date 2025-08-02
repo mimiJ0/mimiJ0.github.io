@@ -12,100 +12,317 @@
     <body>
         <main>
         <!--Main page, landing page-->
+        <div id="qrCode">
+            <p>Scan for mobile!</p>
+            <p>Click to hide!</p>
+            <img src="images/QR_Code.png" alt="Qrcode for mobile to scan" title="qrCode">
+            
+        </div>
             <div id="mainPage">
                 <section class="fullPage hide">
-                    <div class="Test">
+                    <div class="pigeonParts">
                         <h1>LIFE OF A PIGEON...</h1>
                         <div class="relativePos">
-                            <div class="circle"data-part="wing"></div>
-                            <div class="circle"data-part="head"></div>
-                            <div class="circle"data-part="tail"></div>
-                            <img src="images/pigeonFullBody.png">
+                            <div class="circle" data-part="wing"></div>
+                            <div class="circle" data-part="head"></div>
+                            <div class="circle" data-part="tail"></div>
+                            <img src="images/pigeonFullBody.png" alt="Full image of a pigeon" title="Pigeon Full Body" >
                         </div>
                     </div>
+                    <p>Click on the pigeon parts to learn about them.</p>
                 </section>
-
+                
                 <section class="parallaxBG fullPage hide">
                     <h1>Isn't Easy.</h1>
-                    <p>Let's find out why.</p>
+                </section>
+                
+                <section class="whiteBorder hide ">
+                    <h2>Why?</h2>
+                    <p>Pigeons were abandoned by humans unintentionally, being replaced as technology advances rapidly.</p>
+                    <p>Having nowhere to go these pigeons are stuck living on the streets, in close proximity to humans, but keeping safe distance.</p>
+                    <p>Over time, they were seen as <b>"The Sky's Rats"</b>, their image and reputation shifting from a high valued pet to a pest.</p>
+                    <p>Humans started seeing them as diseased ridden nuisance.</p>
                 </section>
 
-                <section class="lockedScroll hide">
-                    <div class="lockedScrollContent lockedScrollButtons" id="pigeonHistoryID">
-                        <h1><i>Pigeon History</i></h1>
-                    </div>
-                    <div class="lockedScrollContent lockedScrollButtons" id="pigeonAbuseID">
-                    <h1><i>Pigeon Abuse</i></h1>
-                    </div>
-                    <div class="lockedScrollContent lockedScrollButtons" id="pigeonBreedsID">
-                    <h1><i>Pigeon Breeds</i></h1>
-                    </div>
-                    <div class="lockedScrollContent lockedScrollButtons" id="pigeonDressUpID">
-                    <h1><i>Dress Up Pigeon</i></h1>
+                <section class="hide">
+                    <h2>Discover</h2>
+                    <p>Click on the images to learn about pigeons</p>
+                    <div class="navigation" id="navigationID">
+                        
+                        <div class="navigationImages">
+                            <img src="images/pigeonHistory_BG.jpg" data-contentbtns="history" alt="Button for history" title="Pigeon History">
+                        </div>
+                        <div>
+                            <h3>Pigeon History</h3>
+                            <p>Learn about the past of pigeons.</p>
+                        </div>
+
+                        <div>
+                            <h3>Pigeon Hatred</h3>
+                            <p>Learn why people hate them now.</p>
+                        </div>
+                        <div class="navigationImages">
+                            <img src="images/pigeonAbuse_BG.jpg" data-contentbtns="abuse" alt="Button for abuse" title="Pigeon Abuse">
+                        </div>
+
+                        <div class="navigationImages">
+                            <img src="images/pigeonBreeds_BG.jpg" data-contentbtns="breeds" alt="Button for breeds" title="Pigeon Breeds">
+                        </div>
+                        <div>
+                            <h3>Pigeon Breeds</h3>
+                            <p>Learn about the different breeds.</p>
+                        </div>
+
+                        <div>
+                            <h3>Pigeon Care</h3>
+                            <p>Take care of your pet pigeon!</p>
+                        </div>
+                        <div class="navigationImages">
+                            <img src="images/pigeonMinigame_BG.jpg"  alt="Button for the minigame" title="Pigeon minigame" data-contentbtns="minigame">
+                        </div>
+
+                        <div class="navigationImages">
+                            <img src="images/pigenQuiz_BG.jpg"  alt="Button for pigeon quiz" title="Pigeon Quiz" data-contentbtns="quiz">
+                        </div>
+                        <div>
+                            <h3>Pigeon Quiz</h3>
+                            <p>Test your knowledge about pigeons!</p>
+                        </div>
+                        
                     </div>
                 </section>
-            </div>
-        <!------------------->
-            <div class="textWindow center hiddenItem" id="wingWindow">
-                <h2>Wings of a Pigeon</h2>
-                <p>38-42 cm Long with a wingspan of 50-67cm</p>
-                <button id="wingBtn" class="btn" data-part="wing">Close</button>
-            </div>
 
-            <div class="textWindow center hiddenItem " id="headWindow">
-                <h2>Head of a Pigeon</h2>
-                <img src="images/pigeonSkull.jpg">
-                <button id="headBtn" class="btn" data-part="head">Close</button>
-            </div>
+                <div class="textWindow center hiddenItem" id="wingWindow">
+                    <h2>Wings of a Pigeon</h2>
+                    <p>38-42 cm Long with a wingh4 of 50-67cm</p>
+                    <button id="wingBtn" class="btn" data-part="wing">Close</button>
+                </div>
 
-            <div class="textWindow center hiddenItem " id="tailWindow">
-                <h2>Tail of a Pigeon</h2>
-                <p>Helps pigeon balance, steer, brake, and attract mates.</p>
-                <button id="tailBtn" class="btn" data-part="tail">Close</button>
+                <div class="textWindow center hiddenItem " id="headWindow">
+                    <h2>Head of a Pigeon</h2>
+                    <img src="images/pigeonSkull.jpg" alt="Image of a pigeon's skull" title="Pigeon skull">
+                    <button id="headBtn" class="btn" data-part="head">Close</button>
+                </div>
+
+                <div class="textWindow center hiddenItem " id="tailWindow">
+                    <h2>Tail of a Pigeon</h2>
+                    <p>Helps pigeon balance, steer, brake, and attract mates.</p>
+                    <button id="tailBtn" class="btn" data-part="tail">Close</button>
+                </div>
+
             </div>
-        <!--Hamburger Menu:-->
-            <div id="menu">
-                <h3>Menu</h3>
-                <button class="hamMenuButtons" data-contentbtns="history">Pigeon History</button>
-                <button class="hamMenuButtons" data-contentbtns="abuse">Pigeon Abuse</button>
-                <button class="hamMenuButtons" data-contentbtns="breeds">Pigeon Breeds</button>
-                <button class="hamMenuButtons" data-contentbtns="upbringing">Pigeon Upbringing</button>
-                <button class="hamMenuButtons" data-contentbtns="home">Home</button>
-            </div>
-        <!------------------->
+            
+        
         <!--contents that will show when button clicked-->
         <!--History: -->
-            <section id="pigeonHistoryContent" class="contentPage hiddenItem">
-                <h2>What are they?</h2>
+            <section id="historyContent" class="contentPage hiddenItem">
+                <h2>What are Pigeons?</h2>
                 <div class="grid_2x1">
-                    <img src="images/rockPigeon.jpg">
+                    <img src="images/rockPigeon.jpg" alt="Image of a rock pigeon" title="Rock Pigeon">
                     <p> Domestic pigeons are a sub species of the 'Rock Pigeon'. These pigeons have been domesticated over <b>50,000</b> years ago, making them one of the oldest domesticated birds.</p>
                 </div>
 
                 <h2>Pigeon history</h2>
                 <div class="grid_2x1">
-                    <img src="images/pigeonRacing.jpg">
+                    <img src="images/pigeonRacing.jpg" alt="Image of a pigeon race" title="Pigeon racing">
                     <div>
                         <p>Not much is known about their initial domestication due to their poor, fragile bones making it hard to study.</p>
                         <p>They were first domesticated in Mesopotamia, intially farmed for food and eventually used for sending letters to others and pigeon races due to their homing ability.</p>
+                        <p><i>Picture shows "pigeon racing"</i></p>
                     </div>
+                </div>
+                <h3>Usage In World War I</h3>
+                <div class="grid_2x1">
+                    <p>Pigeons played a vital role in both World War. Their homing ability, speed, and altitude, made them reliable messengers. A pigeon's role in the war is dangerous, often being shot down before they could reach their target as enemies knew they held important messengers.</p>
                     
-                </div>                    
-                    <button class = "btn" id="backBtn">Back</button>
+                    <img src="images/cherAmi.jpg" alt="Image of a famous pigeon Cher Ami" title="Cher Ami">
+                    
+                    <img src="images/cherAmi_Letter.jpg" alt="Image of the letter Cher Ami delivered" title="Letter during WW1">
+                    <p>But one famous pigeon, <b>Cher Ami</b>, delivered a message that saved nearly 200 soldiers during World War I. Out of 3 pigeons that were released, only Cher Ami managed to deliver the message. This message was crucial since allied soldiers were aiming for their own soldiers without realising.</p>
+
+                    <p>He was then awarded the <b>Croix de guerre</b>, a medal to recognise French and allied soldiers who cited valorous service during the war</p>
+                    <img src="images/croixDeGuerre.jpg" alt="The award given to Cher Ami" title="Croix De Guerre">
+                </div>
+
+                <h3>Pigeon Timeline Summary</h3>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <h4>3000 BCE to 1150 CE (Domestication and food)</h4>
+                            <p>Early evidence in Mesopotamia and ancient Egypt.</p>
+                        </li>
+                        <li>
+                            <h4>Ancient Civilizations</h4>
+                            <p>Used for communication in Egypt, Mesopotamia, Persia, Greece, and Rome.</p>
+                        </li>
+                        <li>
+                            <h4>Ancient Olympics</h4>
+                            <p>Pigeons carried Olympic results to distant cities.</p>
+                        </li>
+                        <li>
+                            <h4>Middle Ages</h4>
+                            <p>Reintroduced to Europe by Crusaders for communication and racing.</p>
+                        </li>
+                        <li>
+                            <h4>1800s</h4>
+                            <p>Pigeon post began in France, expanding internationally.</p>
+                        </li>
+                        <li>
+                            <h4>19th to 20th Centuries</h4>
+                            <p>Used by journalists and militaries during WWI & WWII.</p>
+                        </li>
+                        <li>
+                            <h4>1918, Extinction</h4>
+                            <p>Passenger pigeon went extinct due to overhunting and deforestation.</p>
+                        </li>
+                        <li>
+                            <h4>1940s</h4>
+                            <p>Pigeon racing had a surge in popularity.</p>
+                        </li>
+                        <li>
+                            <h4>Post-WWII</h4>
+                            <p>Usage of pigeons started to decline as modern technologies advances, but some are still used for military.</p>
+                        </li>
+                    </ul>
+                </div>
+                    <button class = "backBtn">Back</button>
+                    
             </section> 
 
-        <!--Abuse: -->
-            <section id="pigeonAbuseContent" class="contentPage hiddenItem">
-                <h2>The Abuse</h2>
-                    <p>Not much is known about their initial domestication due to their poor, fragile bones making it hard to study.</p>
-                    <p>People used to </p>
-                <button class = "btn" id="backBtn">Back</button>
+        <!--hatred: -->
+            <section id="abuseContent" class="contentPage hiddenItem">
+                <h2>The Hate</h2>
+                    <p>Most people are scared of pigeons as they believe they are dirty and carry diseases, this myth most likely came after world war II.</p>
+                    <p>Because they live near humans and leave their droppings everywhere and travel in flocks, this causes more anger towards them. People see them as <b>pests.</b></p>
+                    <p>However, these pigeons rarely transmit diseases and are generally cleaner than most birds. Since they live near humans, their the perception of them being dirty is more on their environment instead of their lack of hygeine.</p>
+                
+                <h2>Issues They Face</h2>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <h4>String Foot</h4>
+                                <div class="grid_2x1">
+                                    <img src="images/pigeonStringfoot.jpg" alt="Image of a string wrapped around a pigeon's foot" title="Stringfoot">
+                                    <p>Pigeon's feet gets tangled in strings like hair, common strings, or fishing lines and more. This cuts circulation to their feet, which is why some pigeons you see in public may have missing toes or missing foot.</p>
+                                </div>
+                                <h5>How to prevent:</h5>
+                                <p>Properly dispose of any sort of thread.</p>
+                            </li>
+                            <li>
+                                <h4>Human Food</h4>
+                                <p>Human junk food, or most human food, are generally unhealthy for most birds.</p>
+                                <p>Since pigeons forage for food from us humans, they may end up suffering from malnourishment or get digestive issues.</p>
+                                <h5>How to prevent:</h5>
+                                <p>Do not over order food and throw leftovers out or drop any.</p>
+                            </li>
+                            <li>
+                                <h4>Lead poisoning</h4>
+                                <p>Pigeons may end up drinking contaminated water in the cities.</p>
+                                <h5>How to prevent:</h5>
+                                <p>Avoid keeping contaminated water uncovered, put a lid over any unclean water source.</p>
+                            </li>
+                            <li>
+                                <h4>Stress induced feather loss</h4>
+                                <p>Pigeons may go through high stress at the environmental changes or overcrowding. This can lead to aggression, faster diseases transmission, feather plucking or weak chicks.</p>
+                                <h5>How to prevent:</h5>
+                                <p>Avoid preventing pigeons from nesting or making loud noises.</p>
+                            </li>
+                        </ul>
+                        <p>These are only a few problems that pigeons, maybe even most animals we see, go through.</p>
+                    </div>
+
+                <button class = "backBtn">Back</button>
             </section> 
-        
-            <img src="images/pigeonStare.jpg" id="hamMenuBtnID">
+             <!--breeds: -->
+            <section id="breedsContent" class="contentPage hiddenItem">
+                <h2>Breeds</h2>
+                <p>Here are only some of the hundreds of pigeon breeds.</p>
+                <div id="pigeonBreedsContainer">
+                        <div class="grid_2x1">
+                            <img src="images/pigeonBreeds/feralRockPigeons.jpg" id="pigeonBreedImg" alt="Image displaying pigeon breed" title="Pigeon Breed Image">
+                        <div>
+                            <h3 id="pigeonBreedTitle">Pigeon Breed</h3>
+                            <div id="pigeonBreedInfo"><p>Text</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrowBtnsContainer">
+                    <div class="arrowCircle" id="left">
+                    <button class="leftArrow"></button>
+                    </div>
+                    <div class="arrowCircle" id="right">
+                        <button class="rightArrow"></button>
+                    </div>
+                </div>
+                <button class = "backBtn">Back</button>
+            </section> 
+             <!--Quiz: -->
+            <section id="quizContent" class="contentPage hiddenItem">
+                <h2>Test Your Knowledge!</h2>
+                
+                <div id="quizContainer">
+                    <div class="quiz" id="questionHolder">
+                        <h2 id="question">Question</h2>
+                        <div id="answerButtons"><p>Answer</p></div>
+                        <button id="nextButton" class="btn">Next</button>
+                    </div>
+                </div>
+
+                <button class = "backBtn">Back</button>
+            </section>
+            <!--Minigame: -->
+            <section id="minigameContent" class="contentPage hiddenItem">
+                <h2>Pigeon Care!</h2>
+                <p>Click the pigeon to earn money!</p>
+                <div class="field">
+                    <img src="images/petPigeon.png" alt="Image of a pigeon" title="Pigeon" id="petPigeonID">
+                    <p id="moneyBox">Money: $0</p>
+                    <div class="interactItem sponge hiddenItem" id="interactItem"></div>
+                    <div class=" ball hiddenItem" ></div>
+                </div>
+                
+                <div class="interactWindow">
+                    <button class="interacBtn" id="feedBtn">Feed Pigeon!</button>
+                    <button class="interacBtn" id="cleanBtn">Clean the Pigeon!</button>
+                    <button class="interacBtn" id="petBtn">Pet Pigeon!</button>
+                    <button class="interacBtn" id="playBtn">Play with Pigeon!</button>
+                </div>
+                <div class="pigeonCareStats">
+                    <p class="careStat" id="hungerID">Hunger: 100</p>
+                    <p class="careStat" id="cleanlinessID">Cleanliness: 100</p>
+                    <p class="careStat" id="loveID">Love: 0</p>
+                    <p class="careStat" id="boredomID">Boredom: 100</p>
+                </div>
+                <div class="foodWindow hiddenItem">
+                    <h3>What do you want to feed it?</h3>
+                    <div id="foodOptions">
+                        <label><input type="radio" name="food" value="5"> Crackers + 5 hunger [$5]</label>
+                        <label><input type="radio" name="food" value="10"> Seeds + 10 hunger [$10]</label>
+                        <label><input type="radio" name="food" value="20"> Fruit + 20 hunger [$20]</label>
+                    </div>
+                    <input type="submit" name="submitFood" value="Feed!" id="feedID">
+                </div>
+                <p>If you're on mobile, tap on the pigeon to interact with any items!</p>
+                <button class = "backBtn">Back</button>
+                <button id = "resetStats">Reset Stats</button>
+            </section>
+           
+        <div id="results"></div>
+            <!--Hamburger Menu:-->
+            <div id="hamMenu">
+                <h3>Menu</h3>
+                <button class="hamMenuButtons" data-contentbtns="history">Pigeon History</button>
+                <button class="hamMenuButtons" data-contentbtns="abuse">Pigeon Abuse</button>
+                <button class="hamMenuButtons" data-contentbtns="breeds">Pigeon Breeds</button>
+                <button class="hamMenuButtons" data-contentbtns="minigame">Pigeon Minigame</button>
+                <button class="hamMenuButtons" data-contentbtns="quiz">Pigeon Quiz</button>
+                <button class="hamMenuButtons" id="homeBtn">Home</button>
+            </div>
+            <img src="images/pigeonStare.jpg" id="hamMenuBtnID" alt="Pigeon hambuger menu Button" title="Hamburger menu button">
+
         </main>
         <footer>
-            <p>Pigeons</p>
+            <p>Lab01 Jolin 244575M</p>
         </footer>
     </body>
 </html>
