@@ -437,6 +437,6 @@ footer {
   .navigation {grid-template-columns: repeat(2, 40%);}
   .arrowBtnsContainer {gap: 80px;}
   .pigeonCareStats {width: 50%;}
-  .qrCode {display: none;}
+  #qrCode {display: none;}
   #questionHolder {width: 100%;}
 }
