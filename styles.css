@@ -415,7 +415,7 @@ footer {
 .show {opacity: 100%;}
 /*****************/
 /**RWS**/
-@media (min-width: 320px ){ /*Mobile*/
+@media (max-width: 480px ){ /*Mobile*/
   .pigeonParts{width: 400px ;}
   .pigeonParts h1{font-size: 50px;}
   .relativePos {width: 300px;}
@@ -425,6 +425,8 @@ footer {
   .list img { width: 40%;}
   .foodContent {width: 70%;}
   #qrCode {display: none;}
+  #hamMenu {width: 100%;}
+  #hamMenuBtnID {width: 15%;}
 }
 
 @media (max-width: 768px){ /*Tablet*/
@@ -436,8 +438,7 @@ footer {
   .navigation {grid-template-columns: repeat(2, 40%);}
   .arrowBtnsContainer {gap: 80px;}
   .pigeonCareStats {width: 50%;}
-  #hamMenu {width: 100%;}
-  #hamMenuBtnID {width: 15%;}
   #qrCode {display: none;}
+  #hamMenu {width: 50%;}
   #questionHolder {width: 100%;}
 }
