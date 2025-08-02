@@ -415,7 +415,7 @@ footer {
 .show {opacity: 100%;}
 /*****************/
 /**RWS**/
-@media (max-width: 599px ){ /*Mobile*/
+@media (max-width: 800px ){ /*Mobile*/
   .pigeonParts{width: 400px ;}
   .pigeonParts h1{font-size: 50px;}
   .relativePos {width: 300px;}
@@ -427,18 +427,4 @@ footer {
   #qrCode {display: none;}
   #hamMenu {width: 100%;}
   #hamMenuBtnID {width: 15%;}
-}
-
-@media (min-width: 600px) and (max-width: 768px){ /*Tablet*/
-  .pigeonParts{width: 320px;}
-  .pigeonParts h1{font-size: 50px;}
-  .relativePos {width: 300px;}
-  .relativePos img {width: 300px;}
-  .grid_2x1 {grid-template-columns: 1fr;}
-  .navigation {grid-template-columns: repeat(2, 40%);}
-  .arrowBtnsContainer {gap: 80px;}
-  .pigeonCareStats {width: 50%;}
-  #qrCode {display: none;}
-  #hamMenu {width: 50%;}
-  #questionHolder {width: 100%;}
 }
