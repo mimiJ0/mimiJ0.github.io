@@ -169,7 +169,6 @@ homeBtn.addEventListener("click", () =>
 
         currentContentWindow.addEventListener('animationend', (e) => {
             const animationName = e.animationName;
-            //console.log(`Animation "${animationName}" has ended.`);
             if (animationName == "hideAndBlurFrames")
             {
                 mainMenu.style.display = "block";
@@ -179,7 +178,6 @@ homeBtn.addEventListener("click", () =>
                 currentContentWindow.classList.add("hiddenItem");
             }
         }, {once: true})
-    //console.log("test"); (it works)
     hamburgerMenu();
 });
 ////////////////////
@@ -356,6 +354,7 @@ setInterval(() => {
 
 displayQuestion();
 
+    //For BREED CONTENT:
 //handles cycling thru the array
 let currentBreedIndex = 0;
 
@@ -425,7 +424,7 @@ document.getElementById("right").addEventListener("click", () => {
 displayBreeds();
 
 
-//For the minigame:
+    //For MINIGAME CONTENT:
 const minigameContent = document.getElementById("minigameContent");
 
 const petPigeon = document.getElementById("petPigeonID");
@@ -582,6 +581,8 @@ document.getElementById("feedID").addEventListener("click", () => {
     getFoodSelection();
 });
 
+//this gets the food the user selected and cycles through each button to check if any has been selected
+//then it'll detect from the money only if there is enough to buy it
 function getFoodSelection() {
     let food = "";
     for (var i = 0; i < foodRadioButtons.length; i++) {
@@ -590,7 +591,6 @@ function getFoodSelection() {
             if (money > 0)
             {
                 food = foodRadioButtons[i].value;
-                //console.log(food); (note: this works)
                 if (money <= 0) money = 0; //cap it
                 
                 if (money >= foodRadioButtons[i].value)
@@ -604,6 +604,7 @@ function getFoodSelection() {
                 }
                 
             }
+            //not enough money, will alert player
             else
                 alert("Not enough money! \nClick your pigeon to earn money!");
         }

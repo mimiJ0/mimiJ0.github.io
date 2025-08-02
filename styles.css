@@ -1,4 +1,4 @@
-body { /*DEFAULT - Mobile*/
+body { 
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
   margin: 0px;
@@ -417,7 +417,7 @@ footer {
 /**RWS**/
 @media (max-width: 800px ){ /*Mobile*/
   .pigeonParts{width: 400px ;}
-  .pigeonParts h1{font-size: 50px;}
+  .pigeonParts h1{font-size: 30px;}
   .relativePos {width: 300px;}
   .relativePos img {width: 300px;}
   .grid_2x1 {grid-template-columns: 1fr;}
@@ -427,4 +427,7 @@ footer {
   #qrCode {display: none;}
   #hamMenu {width: 100%;}
   #hamMenuBtnID {width: 15%;}
+  #questionHolder {width: 100%;}
+  #question {font-size: 18px;}
+  #answerButtons {font-size: 15px;}
 }
