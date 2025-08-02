@@ -429,7 +429,7 @@ footer {
   #hamMenuBtnID {width: 15%;}
 }
 
-@media (max-width: 768px){ /*Tablet*/
+@media (min-width: 481px) and (max-width: 768px){ /*Tablet*/
   .pigeonParts{width: 320px;}
   .pigeonParts h1{font-size: 50px;}
   .relativePos {width: 300px;}
