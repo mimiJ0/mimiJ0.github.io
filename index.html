@@ -2,6 +2,9 @@
 <html lang="en">
 
     <head>
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="manifest" href="manifest.json">
         <link href="styles.css" type="text/css" rel="stylesheet">
         <script src="javascript.js" defer></script>
         <meta charset="UTF-8">
@@ -11,6 +14,10 @@
 
     <body>
         <main>
+        <div class="screenButtons">
+            <button id="btnFS">FullScreen</button>
+            <button id="btnWS">Exit Full Screen</button>
+        </div>
         <!--Main page, landing page-->
         <div id="qrCode">
             <p>Scan for mobile!</p>
