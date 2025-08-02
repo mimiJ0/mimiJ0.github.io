@@ -416,7 +416,7 @@ footer {
 /*****************/
 /**RWS**/
 @media (max-width: 800px ){ /*Mobile*/
-  .pigeonParts{width: 400px ;}
+  .pigeonParts{width: 320px ;}
   .pigeonParts h1{font-size: 30px;}
   .relativePos {width: 300px;}
   .relativePos img {width: 300px;}
