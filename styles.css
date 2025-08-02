@@ -425,8 +425,6 @@ footer {
   .list img { width: 40%;}
   .foodContent {width: 70%;}
   #qrCode {display: none;}
-  #hamMenu {width: 100%;}
-  #hamMenuBtnID {width: 20%;}
 }
 
 @media (max-width: 768px){ /*Tablet*/
@@ -438,6 +436,8 @@ footer {
   .navigation {grid-template-columns: repeat(2, 40%);}
   .arrowBtnsContainer {gap: 80px;}
   .pigeonCareStats {width: 50%;}
+  #hamMenu {width: 100%;}
+  #hamMenuBtnID {width: 15%;}
   #qrCode {display: none;}
   #questionHolder {width: 100%;}
 }
