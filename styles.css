@@ -415,7 +415,7 @@ footer {
 .show {opacity: 100%;}
 /*****************/
 /**RWS**/
-@media (max-width: 480px ){ /*Mobile*/
+@media (max-width: 320px ){ /*Mobile*/
   .pigeonParts{width: 400px ;}
   .pigeonParts h1{font-size: 50px;}
   .relativePos {width: 300px;}
@@ -424,6 +424,7 @@ footer {
   .grid_2x1 img {width: 100%;}
   .list img { width: 40%;}
   .foodContent {width: 70%;}
+  #qrCode {display: none;}
   #hamMenu {width: 100%;}
   #hamMenuBtnID {width: 20%;}
 }
