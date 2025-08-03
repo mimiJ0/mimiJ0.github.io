@@ -4,8 +4,8 @@ const mainMenu = document.getElementById("mainPage");
 //get the audios here:
 const cooAudio = new Audio("audio/PigeonCoo.mp3");
 const moneyEarnAudio = new Audio("audio/coinDrop.mp3");
-const nomAudio = new Audio("audio/nom.wav");
-const bubblingAudio = new Audio("audio/runningWater.wav");
+const nomAudio = new Audio("audio/nom.mp3");
+const bubblingAudio = new Audio("audio/waterRunning.mp3");
 const pigeonPurringAudio = new Audio("audio/pigeonPurring.mp3"); //pigeons purr when theyre happy
 const popSound = new Audio("audio/popsound.mp3");
 
